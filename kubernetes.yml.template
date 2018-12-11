@@ -33,6 +33,7 @@ metadata:
   labels:
     app: twitter-feed
     commit: ${WERCKER_GIT_COMMIT}
+    color: blue
 spec:
   ports:
   - port: 30000
