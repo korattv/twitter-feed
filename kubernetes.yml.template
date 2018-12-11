@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: twitter-feed-v2
+  name: twitter-feed-v3
   labels:
     commit: ${WERCKER_GIT_COMMIT}
 spec:
@@ -14,7 +14,7 @@ spec:
       labels:
         app: twitter-feed
         commit: ${WERCKER_GIT_COMMIT}
-        color: green
+        color: yellow
     spec:
       containers:
       - name: twitter-feed
@@ -45,13 +45,13 @@ metadata:
   labels:
     app: twitter-feed
     commit: ${WERCKER_GIT_COMMIT}
-    color: blue
+    color: yellow
 spec:
   ports:
   - port: 30000
     targetPort: ${PORT}
   selector:
     app: twitter-feed
-    color: blue
+    color: yellow
   type: ClusterIP
 ---
